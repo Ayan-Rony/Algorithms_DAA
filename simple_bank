@@ -1,0 +1,40 @@
+amount=10000
+
+def balance():
+    print("Current Balance::",amount)
+
+def deposit():
+    
+    global amount
+    add=float(input("Enter amount to deposit::"))
+    amount+=add
+    print("Current Balance::",amount)
+    
+def withdraw():
+    
+    global amount
+    sub=float(input("Enter amount to withdraw::"))
+    amount-=sub
+    print("Current Balance::",amount)
+
+print("Welcome!!")
+a=input("Enter your name::")
+b=int(input("Enter the account number"))
+ 
+
+while(True):
+    print("Things you want to perform::\n1.Check Balance\n2.Deposit amount\n3.Withdraw amount")
+    n=int(input("Enter the choice"))   
+    if(n==1):
+        balance()
+        
+    if(n==2):
+        deposit()
+    if(n==3):
+        withdraw()
+    elif(n==4):
+        print("Exit")
+        break
+    elif(n>4):
+        print("Invalid input")
+    
