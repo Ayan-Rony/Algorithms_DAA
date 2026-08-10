@@ -1,0 +1,19 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+    vector<int>vec={3,-4,5,4,-1,7,-8};
+    int n=7;
+    int cursum=0,maxsum;
+    for(int val:vec)
+    {
+        cursum+=val;
+        maxsum=max(cursum,maxsum);
+        if(cursum<0)
+        {
+            cursum=0;
+        }
+    }
+    cout<< maxsum;
+}
