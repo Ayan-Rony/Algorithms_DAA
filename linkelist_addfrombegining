@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+#include<stdlib.h>
+struct node {
+    int data;
+    struct node *link;
+};
+void display(struct node *head){
+    struct node *ptr=head;
+    while(ptr!=NULL){
+        printf("%d ",ptr->data);
+        ptr=ptr->link;
+    }
+}
+struct node *add_beg(struct node *head, int newData) {
+    
+    struct node* ptr = (struct node*)malloc(sizeof(struct node));
+
+    
+    ptr->data = newData;
+
+    
+    ptr->link = head;
+
+    
+    head = ptr;
+    return head;
+}
