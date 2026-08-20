@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include<stdlib.h>
+struct node {
+    int data;
+    struct node *link;
+};
+
+
+void delete_beg(struct node *head){
+    
+    head=head->link;
+    printf("\n");
+    display(head);
+}
+int main(){
+  delete_beg(head);
+  return 0;
+}
