@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include<stdlib.h>
+struct node {
+    int data;
+    struct node *link;
+};
+
+
+
+void delete_last(struct node *head){
+    struct node *temp= head;
+    while(temp->link->link!=NULL){
+      temp = temp->link;
+    }
+    temp->link = NULL;
+
+}
+int main(){
+  delete_last();
+  return 0;
+}
