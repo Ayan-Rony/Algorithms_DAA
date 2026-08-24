@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include<stdlib.h>
+struct node {
+    int data;
+    struct node *link;
+};
+void linear_search(struct node *head,int target){
+    struct node *ptr=head;
+    while(ptr!=NULL)
+    {
+        int c=ptr->data;
+        if(target==c){
+            printf("found");
+        }
+        ptr=ptr->link;
+        
+    }
+    
+}
+
+int main(){
+  linear_search(head,3):
+  return 0;
+}
