@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+
+void bubble_sort(int ar[],int size){
+    for(int step=0;step<size-1;step++){
+        for(int i=0;i<size-step-1;i++){
+            if(ar[i+1]<ar[i]){
+                int temp=ar[i];
+                ar[i]=ar[i+1];
+                ar[i+1]=temp;
+            }
+        }
+    }
+}
+
+int main(){
+  int ar[5]={9,6,78,56,3};
+  bubble_sort(ar,5);
+  return 0;
+}
