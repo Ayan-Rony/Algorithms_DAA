@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+void insertionsort(int ar[],int size)
+{
+    for(int step=1;step<size;step++)
+    {
+        int key=ar[step];
+        int j=step-1;
+        while(j>0 && ar[j]>key)
+        {
+            ar[j+1]=ar[j];
+            --j;
+        }
+        ar[j+1]=key;
+    }
+}
+
+int main(){
+  int ar[5]={2,43,21,76,54};
+  insertionsort(ar,5);
+  return 0;
+}
