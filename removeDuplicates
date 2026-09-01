@@ -1,0 +1,18 @@
+#include<iostream>
+
+int removeDuplicates(vector<int>& nums) {
+    int n=nums.size(),j=0;
+    for(int i=1;i<n;i++){
+        if(nums[i]!=nums[j]) {
+              j++;
+              nums[j]=nums[i];
+        }
+    }
+    return j+1;
+}
+int main(){
+  vector<int>nums = {1,1,2};
+  int a=removeDuplicates(nums);
+  cout<<a<<endl;
+  return 0;
+}
